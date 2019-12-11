@@ -1,7 +1,7 @@
 ## RaspberryPi
 This is a step-wise to setup Raspberry Pi for deep learning applications.
-
-#### Install [raspbian" OS](https://www.raspberrypi.org/downloads/raspbian/)
+* Python 3.7, Tesnorflow 1.8
+#### Install [raspbian OS](https://www.raspberrypi.org/downloads/raspbian/)
 #### Setup python on Pi
 Download this directory and run run [step.sh]() file on terminal.
 ```
@@ -28,4 +28,7 @@ $ chmod +x opencv4.sh
 $ sudo ./opencv4.sh 
 ```
 #### Install Tensorflow
-Coming soon
+```
+$ chmod +x tf4.sh
+$ sudo ./tf4.sh 
+```
