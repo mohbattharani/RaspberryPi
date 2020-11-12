@@ -1,7 +1,7 @@
 ## setup
 To setup mongodb on PI-3, I followed [rpi3-mongodb3](https://github.com/andresvidal/rpi3-mongodb3). 
 #### pull MongoDB 
-``` docker push mohbattharani/mongodb-pi3 ```
+``` docker pull mohbattharani/mongodb-pi3 ```
 #### run container with authorization enabled. 
 Using authorized db even on local system is good practice for building real system in future. 
 ``` 
