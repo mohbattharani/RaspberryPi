@@ -1,9 +1,9 @@
 
 ### sensors:
-dht22: Humadity and temperature sensor
-ds602: PIR motion sensor
-ds18B20: Temperature sensor (water proof)
-hw484: sound sensor (mice)
+* dht22: Humadity and temperature sensor
+* ds602: PIR motion sensor
+* ds18B20: Temperature sensor (water proof)
+* hw484: sound sensor (mice)
 
 
 References:
