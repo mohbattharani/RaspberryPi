@@ -25,5 +25,9 @@ After you have added users, make sure you restart container to ensure the polici
 $ docker kill --signal=SIGINT rpi3-mongodb3
 $ docker start rpi3-mongodb3
 ```
+### MonogDB Simple example 
+Python script *pymongo* can be used to dump the data into MongoDB. A sample script is given in `mongo.py` file. 
+For reference see [meduim](https://medium.com/swlh/how-to-run-mongodb-on-local-network-using-a-raspberry-pi-and-docker-4e5c4379cea2)
 
-Now, to create a python script to log some information, please use `mongo.py` file. For reference see [meduim](https://medium.com/swlh/how-to-run-mongodb-on-local-network-using-a-raspberry-pi-and-docker-4e5c4379cea2)
+### Log system information
+To illustrate a much better example, 'system_info_mongodb.py' can be used to log the system information. The example was created to log *CPU*, *RAM* and *Disk* status of Raspberry Pi 3. The same script can be used log information of any system.
