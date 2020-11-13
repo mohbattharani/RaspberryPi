@@ -20,4 +20,10 @@ $ db.createUser({ user: "pi", pwd: "pi1234", roles: [{ role: "dbOwner", db: "sen
 From terminal login db as: ```$ db.auth("pi", "pi1234")```
 On successful long, it will return `1`
 
+After you have added users, make sure you restart container to ensure the policies are applied.
+```
+$ docker kill --signal=SIGINT rpi3-mongodb3
+$ docker start rpi3-mongodb3
+```
+
 Now, to create a python script to log some information, please use `mongo.py` file. For reference see [meduim](https://medium.com/swlh/how-to-run-mongodb-on-local-network-using-a-raspberry-pi-and-docker-4e5c4379cea2)
