@@ -19,3 +19,4 @@ print (x)
 
 
 db.createUser ({user:'pi', pwd:'pi1234', roles:[{role:'userAdminAnyDatabase', db:'admin'}]})
+db.createUser ({user:'m', pwd:'pi1234', roles:[{role:'userAdminAnyDatabase', db:'admin'}, 'readWriteAnyDatabase']})
