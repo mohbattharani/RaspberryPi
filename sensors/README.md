@@ -5,6 +5,10 @@
 * ds18B20: Temperature sensor (water proof)
 * hw484: sound sensor (mice)
 
+### Log sensor data in MongoDB
+Use *sensors_mongodb.py*
+
+
 
 References:
 [1] https://learn.adafruit.com/
