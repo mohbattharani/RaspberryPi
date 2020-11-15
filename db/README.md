@@ -25,7 +25,8 @@ $ db.createUser({ user: "m", pwd: "pi1234", roles: [ { role: "userAdminAnyDataba
 So, now I have three users; `pi` is admin can create and delete any database, `usr` is owner of *sensors* database so can make changes in it. Whereas, `m` is admin but it can also read-write any database.
 
 From terminal login db as: 
-```> db.auth("pi", "pi1234")
+```
+   > db.auth("pi", "pi1234")
    > 1
 ```
 On successful long, it will return `1`
