@@ -31,3 +31,20 @@ For reference see [meduim](https://medium.com/swlh/how-to-run-mongodb-on-local-n
 
 ## Log system information
 To illustrate a much better example, `system_info_mongodb.py` can be used to log the system information. The example was created to log *CPU*, *RAM* and *Disk* status of Raspberry Pi 3. The same script can be used log information of any system.
+
+## Helpful commands 
+* After you create your database(s), you can find all available database using 
+
+`> show dbs
+> admin
+  local
+  sensors`
+ 
+ Here, I have three databases.
+ 
+* To switch to any database use: `use sensors`, where sensors is the name of my database.
+* Now, to show collection in this database use: `db.getCollectionNames()`. It will return the names of all available collection in the database.
+* To show the entries of a collection use: `db.cvlab.find()`. Here `cvlab` is the name of my collection.
+* To remove the entries from a collection making it empty use: `db.cvlab.remove ({})`. You can also filter entries to be removed. 
+
+
