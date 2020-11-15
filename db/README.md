@@ -45,7 +45,7 @@ To illustrate a much better example, `system_info_mongodb.py` can be used to log
  Here, I have three databases.
  
 * To switch to any database use: `use sensors`, where sensors is the name of my database.
-* Now, to show collection in this database use: `db.getCollectionNames()`. It will return the names of all available collection in the database.
+* Now, to show collections in this database use: `db.getCollectionNames()`. It will return the names of all available collection in the database.
 * To show the entries of a collection use: `db.cvlab.find()`. Here `cvlab` is the name of my collection.
 * To remove the entries from a collection making it empty use: `db.cvlab.remove ({})`. You can also filter entries to be removed. 
 
