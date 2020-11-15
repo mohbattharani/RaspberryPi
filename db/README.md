@@ -35,13 +35,11 @@ To illustrate a much better example, `system_info_mongodb.py` can be used to log
 ## Helpful commands 
 * After you create your database(s), you can find all available database using 
 
-`> show dbs
+```> show dbs
    > admin
-  
-  local
-   
-  sensors
-  `
+     local
+     sensors
+  ```
  
  Here, I have three databases.
  
