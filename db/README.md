@@ -11,10 +11,15 @@ $ docker run -d --name mongodb --restart unless-stopped -v ~/data/db:/data/db -v
 Now, create users from container terminal as follows. Here, user `pi` has admin right, can create or delete database. *sensors* is name of database.
           
 ```
-$ docker exec -it mongodb mongo admin
-$ db.createUser({ user: "pi", pwd: "pi1234", roles: [ { role: "userAdminAnyDatabase", db: "admin" } ] })
-$ db.createUser({ user: "pi", pwd: "pi1234", roles: [{ role: "dbOwner", db: "sensors" }] })
+> docker exec -it mongodb mongo admin
+> db.createUser({ user: "pi", pwd: "pi1234", roles: [ { role: "userAdminAnyDatabase", db: "admin" } ] })
+> db.createUser({ user: "pi", pwd: "pi1234", roles: [{ role: "dbOwner", db: "sensors" }] })
 
+```
+
+To create a user having admin writes as well as can read-write any database, use:
+```
+$ db.createUser({ user: "m", pwd: "pi1234", roles: [ { role: "userAdminAnyDatabase", db: "admin" }, role:'readWriteAnyDatabase' ] })
 ```
 
 From terminal login db as: ```$ db.auth("pi", "pi1234")```
