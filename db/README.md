@@ -13,7 +13,7 @@ Now, create users from container terminal as follows. Here, user `pi` has admin 
 ```
 > docker exec -it mongodb mongo admin
 > db.createUser({ user: "pi", pwd: "pi1234", roles: [ { role: "userAdminAnyDatabase", db: "admin" } ] })
-> db.createUser({ user: "pi", pwd: "pi1234", roles: [{ role: "dbOwner", db: "sensors" }] })
+> db.createUser({ user: "usr", pwd: "pi1234", roles: [{ role: "dbOwner", db: "sensors" }] })
 
 ```
 
@@ -22,13 +22,18 @@ To create a user having admin writes as well as can read-write any database, use
 $ db.createUser({ user: "m", pwd: "pi1234", roles: [ { role: "userAdminAnyDatabase", db: "admin" }, role:'readWriteAnyDatabase' ] })
 ```
 
-From terminal login db as: ```$ db.auth("pi", "pi1234")```
+So, now I have three users; `pi` is admin can create and delete any database, `usr` is owner of *sensors* database so can make changes in it. Whereas, `m` is admin but it can also read-write any database.
+
+From terminal login db as: 
+```> db.auth("pi", "pi1234")
+   > 1
+```
 On successful long, it will return `1`
 
 After you have added users, make sure you restart container to ensure the policies are applied.
 ```
-$ docker kill --signal=SIGINT rpi3-mongodb3
-$ docker start rpi3-mongodb3
+$ docker kill --signal=SIGINT mongodb
+$ docker start mongodb
 ```
 ## MonogDB Simple example 
 Python script *pymongo* can be used to dump the data into MongoDB. A sample script is given in `mongo.py` file. 
